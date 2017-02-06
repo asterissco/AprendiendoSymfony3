@@ -1,0 +1,35 @@
+acl:
+    resource: "@AclBundle/Resources/config/routing.yml"
+    prefix:   /acl
+
+seguridad:
+    resource: "@SeguridadBundle/Resources/config/routing.yml"
+    prefix:   /seguridad
+
+servicio:
+    resource: "@ServicioBundle/Resources/config/routing.yml"
+    prefix:   /servicio
+
+basedatos_actor:
+    resource: "@BasedatosBundle/Controller/ActorController.php"
+    type:     annotation
+
+basedatos:
+    resource: "@BasedatosBundle/Resources/config/routing.yml"
+    prefix:   /basedatos
+
+formulario:
+    resource: "@FormularioBundle/Resources/config/routing.yml"
+    prefix:   /formulario
+
+pantalla:
+    resource: "@PantallaBundle/Resources/config/routing.yml"
+    prefix:   /pantalla
+
+ruta:
+    resource: "@RutaBundle/Resources/config/routing.yml"
+    prefix:   /
+
+# app:
+#     resource: "@AppBundle/Controller/"
+#     type:     annotation

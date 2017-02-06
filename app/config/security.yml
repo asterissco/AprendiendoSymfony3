@@ -1,0 +1,63 @@
+# To get started with security, check out the documentation:
+# http://symfony.com/doc/current/security.html
+security:
+
+    # configuracion ACL usando el proveedor de dato por defecto doctrine.default
+    acl:
+        connection: default
+
+    # http://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
+    providers:
+        in_memory:
+            memory:
+                users:
+                    admin:
+                        password: $2y$12$HHYgUgJkUA/CBsQRNBT60uh102RwPR53oU0MJzCiCpNa6CTNfMMX2
+                        roles: ROLE_ADMIN
+
+        basedatos:
+            entity: { class: SeguridadBundle:User, property: username}
+
+    encoders:
+#        Symfony\Component\Security\Core\User\User: plaintext
+        Symfony\Component\Security\Core\User\User:
+            algorithm: bcrypt
+            cost: 12
+
+        SeguridadBundle\Entity\USer:
+            algorithm: bcrypt
+            cost: 12
+
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+            # activate different ways to au
+        main:
+            security: true
+# no te olvides de esto
+            anonymous: ~
+#            pattern:  ^/seguridad
+#            provider: in_memory
+            provider: basedatos
+            form_login:
+                login_path: /seguridad/entrar
+                check_path: /seguridad/entrar
+                default_target_path: /seguridad/zonaprotegida
+
+            logout:
+                path: /seguridad/salir
+                target: /seguridad
+
+            # activate different ways to authenticate
+
+            # http_basic: ~
+            # http://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
+
+            # form_login: ~
+            # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+
+    access_control:
+        - { path: ^/seguridad/zonaprotegida, roles: ROLE_ADMIN }

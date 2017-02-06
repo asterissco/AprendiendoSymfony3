@@ -1,0 +1,7 @@
+pantalla_homepage:
+    path:     /
+    defaults: { _controller: PantallaBundle:Pantalla:index }
+
+pantalla_resultado:
+    path:     /resultado
+    defaults: { _controller: PantallaBundle:Pantalla:resultado }

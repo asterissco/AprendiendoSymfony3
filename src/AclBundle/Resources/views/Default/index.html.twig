@@ -1,0 +1,44 @@
+ACL :: objetos
+<hr>
+
+<br>
+
+{% for obj in objeto %}
+
+    {{ obj.nombre }}
+    <br>
+{% endfor %}
+<br>
+<br>
+ACL :: conceder o quitar permisos
+<hr>
+{{ form_start(formulario) }}
+{{ form_widget(formulario) }}
+<input type="submit" value="Procesar">
+{{ form_end(formulario) }}
+<br>
+<br>
+{% if accion == "comprobar" %}
+ACL :: comprobar permisos :: usuario {{ user.username }}
+<hr>
+<table style="width:400px">
+
+    <tr>
+        <td>Objeto/Accion</td>
+        <td>Ver</td>
+        <td>Ediar</td>
+    </tr>
+
+    {% for key,permiso in arrComprobarAcl %}
+
+        <tr>
+            <td>{{key}}</td>
+            <td>{{permiso.view}}</td>
+            <td>{{permiso.edit}}</td>
+        </tr>
+
+    {% endfor %}
+
+</tablle>
+
+{% endif %}

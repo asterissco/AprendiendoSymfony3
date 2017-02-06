@@ -1,0 +1,21 @@
+<html>
+<head>
+
+</head>
+<body>
+
+Caculadora | Formulario de entrada
+
+<br><br>
+
+<form action="{{ path('calculadora_salida', {accion:'restart'}) }}" method="post" name="formulario" >
+
+    Numero 1: <input type="text" name="numero1">
+    <br>
+    Numero 2: <input type="text" name="numero2">
+    <br>
+    <input type="submit" value="sumar">
+
+</form>
+</body>
+</html>

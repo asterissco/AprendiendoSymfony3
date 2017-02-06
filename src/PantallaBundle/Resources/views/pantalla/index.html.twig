@@ -1,0 +1,17 @@
+{% extends 'PantallaBundle:pantalla:envoltura.html.twig' %}
+
+{% block body %}
+
+    Calculadora | Entrada
+    <br><br>
+
+    <form action="{{ path('pantalla_resultado') }}" method="POST">
+        Numero 1 <input type="text" name="numero1">
+        <br>
+        Numero 2 <input type="text" name="numero2">
+        <br>
+        <input type="submit" value="SUMAR">
+    </form>
+
+
+{% endblock %}

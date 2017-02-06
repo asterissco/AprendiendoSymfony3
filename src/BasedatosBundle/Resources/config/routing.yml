@@ -1,0 +1,7 @@
+basedatos_pelicula:
+    resource: "@BasedatosBundle/Resources/config/routing/pelicula.yml"
+    prefix:   /pelicula
+
+basedatos_homepage:
+    path:     /
+    defaults: { _controller: BasedatosBundle:Default:index }

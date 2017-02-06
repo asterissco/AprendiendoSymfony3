@@ -1,0 +1,12 @@
+ruta_homepage:
+    path:     /
+    defaults: { _controller: RutaBundle:Default:index }
+
+calculadora_entrada:
+    path:     /calculadora/
+    defaults: { _controller: RutaBundle:Default:calculadoraEntrada }
+
+calculadora_salida:
+    path:     /calculadora/salida/{accion}
+    defaults: { _controller: RutaBundle:Default:calculadoraSalida }
+    methods:  [GET|POST]

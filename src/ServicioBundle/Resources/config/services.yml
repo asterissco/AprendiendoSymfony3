@@ -1,0 +1,10 @@
+services:
+    app.calculadora:
+        class: ServicioBundle\Service\Calculadora
+        # dependecy injection (injectar otros servivios al servicio, en este caso doctrine.em)
+        arguments:
+            - "@doctrine.orm.entity_manager"
+
+#    servicio.example:
+#        class: ServicioBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

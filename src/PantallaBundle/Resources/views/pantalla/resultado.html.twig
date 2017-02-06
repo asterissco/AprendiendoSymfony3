@@ -1,0 +1,30 @@
+{% extends 'PantallaBundle:pantalla:envoltura.html.twig' %}
+
+{% block body %}
+
+    Calculadora | Resultado | <a href="{{ path('pantalla_homepage') }}">Volver</a>
+
+    <br>
+    <br>
+
+    {{ resultado }}
+
+    <br>
+    <br>
+    Recorro un array<br>
+
+    {% for palabra in random %}
+
+        {% if palabra == "El" %}
+            II{{palabra}}
+        {% else %}
+            {{palabra}}
+        {% endif %}
+
+
+    {% endfor %}
+
+    <br><br>
+    Esta es la hora {{ hora }} y esto es con formato {{ hora | date('Y-m-d') }}
+
+{% endblock %}

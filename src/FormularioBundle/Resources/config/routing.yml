@@ -1,0 +1,11 @@
+formulario_homepage:
+    path:     /
+    defaults: { _controller: FormularioBundle:Default:index }
+
+formulario_calculo:
+    path:     /calculo
+    defaults: { _controller: FormularioBundle:Default:calculo }
+
+formulario_resultado:
+    path:     /resultado/{dato}
+    defaults: { _controller: FormularioBundle:Default:resultado }

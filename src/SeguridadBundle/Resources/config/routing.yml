@@ -1,0 +1,14 @@
+seguridad_homepage:
+    path:     /
+    defaults: { _controller: SeguridadBundle:Default:index }
+
+seguridad_zonaprotegida:
+    path:     /zonaprotegida
+    defaults: { _controller: SeguridadBundle:Default:zonaprotegida }
+
+seguridad_entrar:
+    path:     /entrar
+    defaults: { _controller: SeguridadBundle:Default:entrar }
+
+seguridad_salir:
+    path:   /salir

@@ -1,0 +1,24 @@
+pelicula_index:
+    path:     /
+    defaults: { _controller: "BasedatosBundle:Pelicula:index" }
+    methods:  GET
+
+pelicula_show:
+    path:     /{id}/show
+    defaults: { _controller: "BasedatosBundle:Pelicula:show" }
+    methods:  GET
+
+pelicula_new:
+    path:     /new
+    defaults: { _controller: "BasedatosBundle:Pelicula:new" }
+    methods:  [GET, POST]
+
+pelicula_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BasedatosBundle:Pelicula:edit" }
+    methods:  [GET, POST]
+
+pelicula_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BasedatosBundle:Pelicula:delete" }
+    methods:  DELETE
