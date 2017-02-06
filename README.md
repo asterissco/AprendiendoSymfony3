@@ -1,10 +1,32 @@
-AprendiendoSymfony3
+## AprendiendoSymfony3
 ========================
 
 Proyecto para hacer pruebas y actualizar conocimientos a Symfony 3 viniendo
 desde Symfony 2 o desde cero
 
-Temario inicial
+# Configuración e instalación
+
+- Modificar dev para acceder desde tu red
+
+	vim web/app_dev.php
+
+- Instalar vendor 	
+
+	composer.phar install
+
+- Configurar base de datos sino lo ha hecho composer
+
+	vim app/config/parameters.yml
+
+- Cargar la estructura de ACL en la base de datos
+
+	php bin/console init:acl
+
+- Cargar los datos iniciales (fixtures)
+
+	php bin/console doctrine:fixtures:load
+
+# Temario inicial
 
 1. Instalacion
 
